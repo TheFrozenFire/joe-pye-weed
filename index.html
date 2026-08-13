@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joe Pye Weed (Eutrochium) — A Botanical and Farming Brief</title>
+  <meta name="description" content="A structured research report on Joe Pye Weed: taxonomy, morphology, root system, ecology, chemistry, cultivars, and farming implications for ornamental and pollinator production.">
+  <meta name="author" content="Research brief compiled 13 August 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c2118;
+      --ink-soft: #3d4536;
+      --muted: #5e6756;
+      --rule: #d4cbb8;
+      --paper: #f7f2e8;
+      --paper-2: #efe8d8;
+      --card: #fffdf8;
+      --mauve: #7a3d56;
+      --mauve-deep: #5a2a3e;
+      --dust: #c48b9a;
+      --sage: #3f5a3c;
+      --sage-soft: #6d8564;
+      --gold: #8a6a2f;
+      --warn: #7a3a12;
+      --warn-bg: #f3e4d2;
+      --ok-bg: #e4ece0;
+      --gap-bg: #e8e4f0;
+      --shadow: 0 1px 0 rgba(28,33,24,.06), 0 12px 32px rgba(28,33,24,.06);
+      --max: 72rem;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, rgba(196,139,154,.18), transparent 50%),
+        radial-gradient(900px 400px at 100% 0%, rgba(63,90,60,.10), transparent 45%),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    a { color: var(--mauve-deep); }
+    a:hover { color: var(--mauve); }
+    code, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .9em; }
+
+    .skip {
+      position: absolute; left: -999px; top: .5rem;
+      background: var(--ink); color: var(--paper); padding: .5rem 1rem;
+    }
+    .skip:focus { left: .5rem; z-index: 20; }
+
+    header.hero {
+      border-bottom: 1px solid var(--rule);
+      background: linear-gradient(180deg, #fbf7ee 0%, var(--paper) 100%);
+    }
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2.25rem 1.25rem 2rem;
+    }
+    .kicker {
+      display: flex; flex-wrap: wrap; gap: .5rem .75rem;
+      align-items: center;
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      font-weight: 600;
+    }
+    .kicker span.dot { width: .35rem; height: .35rem; border-radius: 50%; background: var(--dust); }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -.02em;
+      margin: .7rem 0 .6rem;
+    }
+    h1 em { font-style: italic; font-weight: 600; color: var(--mauve-deep); }
+    .lede {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.22rem;
+      max-width: 46rem;
+      color: var(--ink-soft);
+      margin: 0 0 1.25rem;
+    }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: .55rem;
+      font-size: .88rem; color: var(--muted);
+    }
+    .pill {
+      border: 1px solid var(--rule);
+      background: var(--card);
+      border-radius: 999px;
+      padding: .2rem .7rem;
+    }
+
+    .layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 4rem;
+      display: grid;
+      grid-template-columns: 16.5rem 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
+      nav.toc { position: static !important; }
+    }
+
+    nav.toc {
+      position: sticky;
+      top: .75rem;
+      align-self: start;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: .9rem .95rem 1rem;
+      box-shadow: var(--shadow);
+      max-height: calc(100vh - 1.5rem);
+      overflow: auto;
+    }
+    nav.toc h2 {
+      font-family: "Source Sans 3", sans-serif;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 .55rem;
+    }
+    nav.toc ol {
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    nav.toc li { margin: 0; }
+    nav.toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: .88rem;
+      line-height: 1.3;
+      padding: .32rem .35rem;
+      border-radius: 6px;
+    }
+    nav.toc a:hover, nav.toc a:focus { background: var(--paper-2); color: var(--mauve-deep); }
+    nav.toc .sub { padding-left: 1rem; font-size: .82rem; color: var(--muted); }
+
+    main { min-width: 0; }
+    section.chapter {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1.5rem 1.4rem 1.6rem;
+      margin-bottom: 1.15rem;
+      box-shadow: var(--shadow);
+    }
+    .chapter-num {
+      font-size: .75rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      font-weight: 700;
+    }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      margin: .15rem 0 .8rem;
+    }
+    h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.22rem;
+      margin: 1.4rem 0 .45rem;
+    }
+    h4 { margin: 1rem 0 .35rem; font-size: 1.02rem; }
+    p { margin: 0 0 .85rem; }
+    ul, ol { margin: 0 0 .9rem; padding-left: 1.2rem; }
+    li { margin: .22rem 0; }
+    li ul { margin: .25rem 0 .4rem; }
+
+    figure {
+      margin: 1rem 0 1.15rem;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    figure img { width: 100%; display: block; max-height: 26rem; object-fit: cover; }
+    figcaption {
+      font-size: .82rem;
+      color: var(--muted);
+      padding: .55rem .75rem .65rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .86rem;
+      line-height: 1.4;
+      margin: .4rem 0 1rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--rule);
+      padding: .5rem .45rem;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background: var(--paper-2);
+      font-weight: 600;
+      color: var(--ink);
+    }
+    tr:last-child td { border-bottom: 0; }
+    .table-wrap { overflow-x: auto; margin: 0 -.2rem 1rem; }
+    .table-wrap table { min-width: 52rem; }
+
+    .callout {
+      border-left: 4px solid var(--mauve);
+      background: #f8eef1;
+      padding: .75rem .9rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .callout.ok { border-color: var(--sage); background: var(--ok-bg); }
+    .callout.warn { border-color: var(--gold); background: var(--warn-bg); }
+    .callout.gap { border-color: #6b5b8a; background: var(--gap-bg); }
+    .callout strong { display: block; margin-bottom: .2rem; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+    }
+    @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: .85rem .9rem;
+    }
+    .card h3 { margin-top: 0; font-size: 1.05rem; }
+
+    .id-steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+    .id-steps li {
+      counter-increment: step;
+      position: relative;
+      padding: .55rem .7rem .55rem 2.6rem;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      margin: .4rem 0;
+    }
+    .id-steps li::before {
+      content: counter(step);
+      position: absolute; left: .55rem; top: .55rem;
+      width: 1.45rem; height: 1.45rem;
+      border-radius: 50%;
+      background: var(--mauve-deep); color: #fff;
+      display: grid; place-items: center;
+      font-size: .8rem; font-weight: 700;
+    }
+
+    footer.site {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    footer.site p { margin: .3rem 0; }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      nav.toc, .skip { display: none; }
+      .layout { display: block; padding: 0; }
+      .chapter { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+      a { color: inherit; text-decoration: none; }
+      header.hero { border: 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to report</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker">
+        <span>Research brief</span>
+        <span class="dot"></span>
+        <span>Asteraceae · Eupatorieae · <i style="text-transform:none;letter-spacing:0">Eutrochium</i></span>
+        <span class="dot"></span>
+        <span>13 August 2026</span>
+      </div>
+      <h1>Joe Pye Weed is not one plant.<br>It is five species of <em>Eutrochium</em>.</h1>
+      <p class="lede">A botanical and agricultural briefing for someone considering farming a plant that already grows heavily on their land, and is in demand as an ornamental and pollinator crop. Taxonomy, morphology, the root system (and related plants that fill the gaps), ecology, chemistry, cultivars, and a realistic farm path.</p>
+      <div class="meta">
+        <span class="pill">Local-ecotype opportunity</span>
+        <span class="pill">Identify the species first</span>
+        <span class="pill">Shallow fibrous crown + short rhizomes</span>
+        <span class="pill">Not a herbal cash crop</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">1. What it actually is</a></li>
+        <li><a href="#s2">2. The five species</a></li>
+        <li><a href="#s3">3. Botanical architecture</a></li>
+        <li><a href="#s4">4. The root system</a></li>
+        <li><a href="#s5">5. Ecology and range</a></li>
+        <li><a href="#s6">6. Pollinators and food web</a></li>
+        <li><a href="#s7">7. Chemistry and toxicity</a></li>
+        <li><a href="#s8">8. Cultivation and farming</a></li>
+        <li><a href="#s9">9. The market</a></li>
+        <li><a href="#s10">10. Farming implications</a></li>
+        <li><a href="#s11">11. Knowledge gaps</a></li>
+        <li><a href="#s12">12. Sources</a></li>
+      </ol>
+    </nav>
+
+    <main id="main">
+      <section class="chapter" id="s1">
+        <div class="chapter-num">Section 1</div>
+        <h2>What “Joe Pye Weed” actually is</h2>
+        <p>Joe Pye Weed is the common name for five closely related North American species in the genus <i>Eutrochium</i>. What is growing heavily on a property is almost certainly one (or a hybrid mix) of those five. Which one you have changes almost everything: moisture tolerance, how aggressively it spreads, how tall it gets, how easy it is to farm, and which market it belongs in.</p>
+        <p>The first farming decision is identification. The rest of this report is written so it can be used after you know which species you have.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Taxonomic place</h3>
+            <ul>
+              <li><strong>Family:</strong> Asteraceae</li>
+              <li><strong>Tribe:</strong> Eupatorieae</li>
+              <li><strong>Genus:</strong> <i>Eutrochium</i> Rafinesque (1838), restored as the correct name in 2004 by Eric E. Lamont</li>
+              <li><strong>Older names still in trade:</strong> <i>Eupatorium</i> (pre-1970 and still common on tags), <i>Eupatoriadelphus</i> (King &amp; Robinson, 1970)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Why the name changed</h3>
+            <p style="margin-bottom:.4rem"><i>Eutrochium</i> is from Greek <i>eu-</i> (“well/truly”) + <i>trochos</i> (“wheel”), referring to the whorled leaves. That whorl is the genus’s calling card.</p>
+            <p style="margin:0">True <i>Eupatorium</i> (bonesets, thoroughworts) have opposite leaves and white flowers. <i>Eutrochium</i> has whorled leaves and pink-to-purple flowers. The split is supported by morphology and molecular data (chloroplast DNA restriction sites, nuclear ITS).</p>
+          </div>
+        </div>
+
+        <p>Closest living relatives are the white-flowered temperate <i>Eupatorium</i> species. The broader tribe also includes <i>Ageratina</i> (white snakeroot), <i>Conoclinium</i> (mistflower / hardy ageratum), and the European <i>Eupatorium cannabinum</i> (hemp agrimony). Those relatives matter later, because they are better studied than Joe Pye itself, especially underground.</p>
+        <ul>
+          <li><strong>Base chromosome number:</strong> <i>x</i> = 10. Most counts are <strong>2n = 20</strong> (diploid). <i>E. fistulosum</i> is documented at 2n = 20; <i>E. maculatum</i> at 2n = 20 (occasional haploid counts of <i>n</i> = 10 in the literature).</li>
+          <li>Species hybridize where ranges overlap, which is why plants on a single property can be hard to key cleanly.</li>
+          <li><strong>Conservation status:</strong> NatureServe G5 (secure) for the widespread species. <i>E. steelei</i> is a southern Appalachian endemic and is not a farm plant.</li>
+        </ul>
+        <p><strong>Common-name origin.</strong> The best-documented account (Pearce &amp; Pringle, <i>The Great Lakes Botanist</i>, 2017) identifies Joe Pye as a Mohican sachem, Schauquethqueat, who lived at Stockbridge, Massachusetts c. 1740–1785 and took the Christian name Joseph Pye. The plant was used as a fever/typhus remedy and as a urinary-tract medicine (“gravel root”).</p>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Joe_Pye_5426.JPG/1280px-Joe_Pye_5426.JPG" alt="Joe Pye Weed in flower, large pink-purple dome-shaped clusters">
+          <figcaption>Joe Pye Weed in bloom. The “plume” is hundreds of tiny disk florets — there are no ray flowers. Photo: Wikimedia Commons, public domain / CC as marked on file page.</figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter" id="s2">
+        <div class="chapter-num">Section 2</div>
+        <h2>The five species — the farm-critical table</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Trait</th>
+                <th>Sweet Joe Pye<br><i>E. purpureum</i></th>
+                <th>Spotted Joe Pye<br><i>E. maculatum</i></th>
+                <th>Hollow Joe Pye<br><i>E. fistulosum</i></th>
+                <th>Coastal Joe Pye<br><i>E. dubium</i></th>
+                <th>Steele’s Joe Pye<br><i>E. steelei</i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Height</th>
+                <td>5–8 ft (to ~7.9 ft)</td>
+                <td>3–7 ft</td>
+                <td>4–11+ ft (to 11.5 ft)</td>
+                <td>3–5 ft (cultivars 3–5)</td>
+                <td>3–6 ft</td>
+              </tr>
+              <tr>
+                <th>Stem</th>
+                <td>Green, <strong>purple only at nodes</strong>; usually <strong>solid</strong> (rarely a slender basal cavity); not glaucous</td>
+                <td>Purple <strong>or green with purple spots</strong>; usually solid; often hairy</td>
+                <td>Purple throughout, <strong>strongly glaucous</strong> (waxy bloom); <strong>hollow</strong></td>
+                <td>Purple or purple-speckled; smaller plant</td>
+                <td>Glandular-hairy throughout</td>
+              </tr>
+              <tr>
+                <th>Leaves / whorl</th>
+                <td>3–4</td>
+                <td>4–5</td>
+                <td>4–7 (often 5–6)</td>
+                <td>3–4; often 3-nerved, blades abruptly contracted to petiole</td>
+                <td>Similar to <i>purpureum</i> but hairier</td>
+              </tr>
+              <tr>
+                <th>Florets per head</th>
+                <td>4–7</td>
+                <td><strong>8–22</strong></td>
+                <td>5–7</td>
+                <td>(4–)5–9(–10)</td>
+                <td>4–10</td>
+              </tr>
+              <tr>
+                <th>Inflorescence</th>
+                <td>Dome / convex</td>
+                <td><strong>Flat-topped</strong></td>
+                <td>Dome, can be 12–18 in across</td>
+                <td>Dome, smaller</td>
+                <td>Dome</td>
+              </tr>
+              <tr>
+                <th>Habitat</th>
+                <td>Mesic woods, wood edges, <strong>drier and shadier</strong> than the others</td>
+                <td>Marshes, fens, wet meadows, full sun</td>
+                <td>Wet meadows, ditches, seeps, floodplains</td>
+                <td>Coastal plain wetlands, acid soils</td>
+                <td>Southern Appalachian coves</td>
+              </tr>
+              <tr>
+                <th>Wetland status</th>
+                <td><strong>FAC</strong> (wetlands <em>or</em> uplands)</td>
+                <td><strong>FACW to OBL</strong> (usually/always wetland)</td>
+                <td><strong>FACW</strong></td>
+                <td><strong>FACW</strong></td>
+                <td>Mountain wetlands</td>
+              </tr>
+              <tr>
+                <th>Hardiness</th>
+                <td>Zones 4–9</td>
+                <td>Zones 3–8</td>
+                <td>Zones 4–8</td>
+                <td>Zones 3–9</td>
+                <td>Narrow Appalachian</td>
+              </tr>
+              <tr>
+                <th>Root habit</th>
+                <td>Fibrous, clumping; usually short-rhizomatous</td>
+                <td>Fibrous <strong>and rhizomatous</strong>; small clonal colonies</td>
+                <td>Mostly fibrous; <strong>sometimes rhizomes</strong>; can be aggressive</td>
+                <td>Clumping, slower</td>
+                <td>Restricted range</td>
+              </tr>
+              <tr>
+                <th>Farming note</th>
+                <td>Best all-around garden/woodland crop; most drought-tolerant of the five</td>
+                <td>Best wetland/rain-garden crop; widest native range (only species west of the Great Plains)</td>
+                <td>Biggest ornamental punch; flop risk; most aggressive by seed + occasional rhizomes</td>
+                <td>Source of the money cultivars (‘Little Joe’, ‘Baby Joe’)</td>
+                <td>Do not farm; leave it in the mountains</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>If it is growing heavily on the property</h3>
+        <ul>
+          <li><strong>Wet meadow, ditch, seep, pond edge, full sun</strong> → <i>E. fistulosum</i> or <i>E. maculatum</i></li>
+          <li><strong>Wood edge, mesic slope, part shade, soil that dries between rains</strong> → <i>E. purpureum</i></li>
+          <li><strong>Coastal plain, acidic, sandy-organic</strong> → <i>E. dubium</i></li>
+        </ul>
+
+        <h3>Field ID in 60 seconds</h3>
+        <p>Snap a stem near the base.</p>
+        <ol class="id-steps">
+          <li><strong>Hollow + waxy purple stem + 5–7 leaves</strong> = <i>fistulosum</i></li>
+          <li><strong>Solid + spotted/purple stem + flat flower cluster + 8–20 florets</strong> = <i>maculatum</i></li>
+          <li><strong>Solid + purple only at the nodes + dome cluster + 5–7 florets</strong> = <i>purpureum</i></li>
+        </ol>
+        <p>They hybridize. If the stand is mixed, treat it as a local population, not a named cultivar.</p>
+        <div class="callout">
+          <strong>Operational sentence</strong>
+          Joe Pye Weed is a shallow-rooted, crown-forming, short-rhizome, wind-seeded, late-summer discoid aster that makes its living on moisture and pollinators. The five species are different enough that farming “Joe Pye” without knowing which one you have is like farming “oak.”
+        </div>
+      </section>
+
+      <section class="chapter" id="s3">
+        <div class="chapter-num">Section 3</div>
+        <h2>Botanical architecture</h2>
+
+        <h3>Habit</h3>
+        <p>Herbaceous perennial. One to several erect, mostly unbranched stems from a crown. Branching is confined to the upper third, where the inflorescence opens. In good conditions a mature clump is 2–4 ft wide (<i>fistulosum</i> and <i>maculatum</i> wider with age). Chicago Botanic Garden (Hawke, 2014) described the best plants as “colossal, bodacious, and tough.”</p>
+        <p>Spring emergence is late relative to woodland ephemerals — typically a week or two after <i>Zizia aurea</i> (golden Alexander), well after most garden perennials are up. That late start is useful: the bed can still be worked in early spring without crushing shoots.</p>
+        <p>Winter: stems die to the crown. Hollow or pithy standing stems are used as solitary-bee nest sites. Production practice is to cut to the ground in late winter, but leaving 6–18 in of stem is now recommended in pollinator plantings.</p>
+
+        <h3>Stem anatomy</h3>
+        <p>Stems are terete (round), stout, and in <i>fistulosum</i> conspicuously hollow — a fistula. That hollow stem is a structural choice: it is a cheap way to get height in a wet soil where oxygen is limiting and lodging from wind/rain is the main mechanical risk. <i>Purpureum</i> stays solid (or nearly so) because it lives in more sheltered, drier woodland-edge sites and does not need the same height-to-mass ratio.</p>
+        <p>Anthocyanin (purple pigment) at nodes or throughout the stem is a reliable taxonomic character and also a horticultural selling point. Cultivars such as ‘Gateway’, ‘Atropurpureum’, and ‘Glutball’ were selected for deep burgundy stems.</p>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Whorled_leaves_of_Joe_Pye_Weed.jpg/1280px-Whorled_leaves_of_Joe_Pye_Weed.jpg" alt="Whorled leaves of Joe Pye Weed arranged around the stem like a wheel">
+          <figcaption>Whorled leaves — the character that gives <i>Eutrochium</i> its name. Pisgah National Forest, North Carolina. Wikimedia Commons.</figcaption>
+        </figure>
+
+        <h3>Leaves</h3>
+        <p>Whorled, simple, lanceolate to elliptic, serrate to crenate, 6–12 in long, 2–3.5 in wide. Upper surface medium green, often creased along the veins; lower surface paler, sometimes finely pubescent. Petioles short and often purple. <i>E. dubium</i> is the odd one: leaves often 3-nerved with blades abruptly contracted to the petiole.</p>
+        <p>The large leaf area and coarse texture are why this plant looks architectural in a border and why it scorches when the soil dries. It is a high-transpiring wetland/mesic forb, not a drought specialist. <i>E. purpureum</i> is the only species that regularly survives average garden soil that occasionally dries.</p>
+        <p>Crushed foliage of <i>E. purpureum</i> is classically vanilla-scented (Gray’s <i>Manual</i>). That trait is inconsistent in the field and should not be used as a sole ID character.</p>
+
+        <h3>Flowers</h3>
+        <p>This is a <strong>discoid composite</strong>. There are <strong>no ray florets</strong>. What looks like a plume is hundreds of tiny tubular disk florets, each with five lobes, five stamens, and a long exserted two-branched style. The style branches give the inflorescence its fuzzy, bottle-brush look.</p>
+        <ul>
+          <li>Individual floret: ~8 mm long, ~3 mm wide</li>
+          <li>Head: 4–22 florets depending on species; involucre of 10–22 unequal phyllaries in 5–6 series</li>
+          <li>Compound array: corymbiform, 3–18 in across</li>
+          <li>Color: pink-lavender to deep rose; rare white forms (<i>fistulosum</i> f. <i>albidum</i>, ‘Bartered Bride’)</li>
+          <li>Bloom: mid-July through September/early October, typically <strong>4–6 weeks</strong> of useful display (Chicago Botanic Garden recorded 6 weeks average, some taxa 8–10)</li>
+          <li>Fragrance: mild vanilla, especially <i>purpureum</i></li>
+        </ul>
+        <p>The flowers are perfect (bisexual). They do not produce viable seed without cross-pollination — they are not reliably self-fertile. That matters if you want seed from an isolated clump.</p>
+
+        <h3>Fruit and seed</h3>
+        <p>The fruit is a <strong>cypsela</strong> (technically not an achene, though everyone calls it one): prismatic, 5-ribbed, 3–5 mm, dark brown to black, usually gland-dotted. Pappus of 25–40 cream-to-pinkish barbellate bristles. Wind-dispersed.</p>
+        <p>Lady Bird Johnson Wildflower Center: nutlets mature shiny black <strong>4–5 weeks after bloom fades</strong>. Only a small percentage are viable; viable seed is plump and swollen. Store in a sealed refrigerated container. Dry room-temperature storage kills germination — fridge-stored seed germinates; paper-bag-on-a-shelf seed often does not.</p>
+        <p><strong>Germination biology</strong></p>
+        <ul>
+          <li><strong>Light-requiring</strong> (photoblastic). Press onto the surface; do not bury.</li>
+          <li><strong>Cold-moist stratification:</strong> 30–90 days depending on source; Lady Bird specifies <strong>3 months</strong> for <i>E. purpureum</i>. 60 days at 34–40°F is a practical production recipe.</li>
+          <li>Germination after strat: 14–28 days at ~70°F.</li>
+          <li><strong>Germination rate is low.</strong> Sow thickly.</li>
+          <li>Seedlings grow slowly the first season. Typical pattern: vegetative year 1, first real bloom year 2.</li>
+        </ul>
+        <p>This is physiological dormancy typical of temperate Asteraceae, not a hard seed coat. Fall sowing or winter-sowing in milk jugs is the reliable amateur method because nature does the stratification.</p>
+      </section>
+
+      <section class="chapter" id="s4">
+        <div class="chapter-num">Section 4</div>
+        <h2>The root system — what is known, and what we have to infer</h2>
+        <p>This is the thinnest part of the published record. There is <strong>no peer-reviewed quantitative root-architecture study</strong> of <i>Eutrochium</i> (no depth profiles, no specific root length, no biomass allocation, no minirhizotron data). What follows is every primary description located for this brief, then a reconstruction from related Eupatorieae.</p>
+
+        <h3>Direct observations on <i>Eutrochium</i></h3>
+        <p><strong>Consensus across floras and growers</strong></p>
+        <ul>
+          <li>The root system is <strong>fibrous and relatively shallow</strong>.</li>
+          <li>A <strong>crown</strong> sits at or just below the soil surface. New shoots arise from that crown each spring.</li>
+          <li><strong>Short rhizomes</strong> (horizontal underground stems) are present in some species, some of the time.</li>
+          <li>The plant is <strong>easy to dig and divide</strong> because the roots do not go deep and do not form a woody taproot.</li>
+        </ul>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Species</th><th>What sources actually say</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><i>E. purpureum</i></th>
+                <td>NC State: “root system is shallow and fibrous.” Missouri Plants: “fibrous rooted, usually rhizomatous.” Clump-forming. One popular source claims short rhizomes advance 2–4 in/year (plausible, not from a measured study). Does <strong>not</strong> form large colonies.</td>
+              </tr>
+              <tr>
+                <th><i>E. maculatum</i></th>
+                <td>NC State: “fibrous and rhizomatous. This plant often forms small clonal colonies.” Lady Bird: “Root Type: Fibrous.” Chicago Botanic Garden is more cautious: plants grow in aggregates in native wetlands, “giving the mistaken impression that it is rhizomatous.” Both can be true: short rhizomes plus seedling recruitment in wet soil produce patches that look clonal.</td>
+              </tr>
+              <tr>
+                <th><i>E. fistulosum</i></th>
+                <td>Illinois Wildflowers: “mostly fibrous, although sometimes rhizomes are produced.” This is the species most often called aggressive, and the aggression is more from <strong>seed + size</strong> than from running rhizomes. Documented as invasive in Slovenia after garden escape.</td>
+              </tr>
+              <tr>
+                <th><i>E. dubium</i></th>
+                <td>Clump-forming. Cultivars (‘Little Joe’, ‘Baby Joe’) are described as slow-spreading clumps, 2–3 ft wide over a few years. Patent for ‘Little Joe’: “relatively slow growing clump.”</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Practical morphology of a dug plant</strong> (from herbalist 7Song’s photographed <i>E. purpureum</i> roots and grower accounts):</p>
+        <ul>
+          <li>A thickened, irregular <strong>caudex / crown</strong> at the soil line</li>
+          <li>A dense mat of <strong>cord-like fibrous roots</strong> radiating outward and downward, mostly in the top 6–12 inches</li>
+          <li>Occasional <strong>short, fleshy rhizome segments</strong> that produce new crowns a few inches from the parent</li>
+          <li>No taproot</li>
+          <li>Crown can become hollow / die in the center of old clumps (classic “donut” of aging herbaceous perennials). Division every 3–5 years is standard advice.</li>
+        </ul>
+        <p>The shallowness is not a defect. It is the correct architecture for a plant that lives where the water table is high and oxygen is the limiting resource, not water. Deep roots in a saturated soil rot. Fibrous roots in the aerated surface layer, plus asexual spread by short rhizomes, is the standard wetland-forb solution.</p>
+
+        <div class="callout ok">
+          <strong>What this means for farming</strong>
+          Transplanting is easy — a spade around the drip line at 45–60°, lift, split with a saw or knife. They will <strong>not</strong> mine deep soil moisture: irrigation or a naturally moist site is non-negotiable for <i>maculatum</i> and <i>fistulosum</i>. They <strong>will</strong> bind the topsoil (boneset, the closest well-described relative, is used for wet-bank erosion control). They will <strong>not</strong> become a quackgrass-style nightmare: spread is measured in inches per year, not feet, except where seed lands on open moist soil. Old clumps need division or they decline from the center.
+        </div>
+
+        <h3>Related plants that fill the gaps</h3>
+        <p>Because nobody has mapped <i>Eutrochium</i> roots properly, the best inferences come from tribe Eupatorieae plants that occupy the same habitats and share the same growth form.</p>
+        <ul>
+          <li><strong>Common boneset (<i>Eupatorium perfoliatum</i>)</strong> — the sister-genus wetland specialist. Illinois Wildflowers: “The root system is fibrous and produces rhizomes in abundance. Common Boneset typically forms vegetative colonies.” This is the more aggressively clonal version of the same design. If the Joe Pye is <i>maculatum</i> in a fen, expect behavior closer to boneset than to <i>purpureum</i>.</li>
+          <li><strong>Hemp agrimony (<i>Eupatorium cannabinum</i>)</strong> — the European ecological analog. Short rhizomes, clump-to-colony, same moist-to-wet niche, far better studied chemically. It “slowly spreads with short rhizomes.” Treat this as the well-documented model for how <i>fistulosum</i> and <i>maculatum</i> probably behave.</li>
+          <li><strong>White snakeroot (<i>Ageratina altissima</i>)</strong> — formerly <i>Eupatorium rugosum</i>. Strongly rhizomatous, woodland-edge colonizer, forms dense clones. <strong>Do not confuse it with Joe Pye.</strong> Opposite leaves, white flowers, and it contains <strong>tremetol</strong>, the cause of milk sickness. Different genus, different chemistry, different root strategy (more runner, less clump).</li>
+          <li><strong>Hardy ageratum (<i>Conoclinium coelestinum</i>)</strong> — formerly <i>Eupatorium coelestinum</i>. Explicitly rhizomatous; Chicago Botanic Garden watched crowns die in winter and resprout from rhizomes and seed every spring. This is the “true runner” end of the tribe. Joe Pye is not this.</li>
+        </ul>
+
+        <p><strong>Typical wetland Asteraceae strategy</strong> (from the broader literature on <i>Eupatorium</i>, <i>Vernonia</i>, <i>Helenium</i>, <i>Asclepias incarnata</i>):</p>
+        <ul>
+          <li>High specific root length (thin roots, cheap to build)</li>
+          <li>Concentration in the top 10–20 cm</li>
+          <li>Arbuscular mycorrhizae (AMF) when the soil is not flooded; reduced colonization under saturation</li>
+          <li>Aerenchyma (air channels) in roots and rhizomes of the wetter species — almost certainly present in <i>fistulosum</i> and <i>maculatum</i> given the hollow stem, though no anatomical paper confirming it was found</li>
+          <li>Storage in the crown, not a tuber or taproot. Spring flush is fueled by crown carbohydrates.</li>
+        </ul>
+        <p><strong>Mycorrhizae.</strong> No <i>Eutrochium</i>-specific AMF study was found. Asteraceae in this tribe are almost universally arbuscular-mycorrhizal in mesic soils. Expect <i>purpureum</i> (drier sites) to be more mycorrhizal than <i>maculatum</i> in standing water. Do not inoculate as a production gimmick unless there is a reason; native soil on the property already has the fungi.</p>
+        <p><strong>Allelopathy.</strong> No credible <i>Eutrochium</i>-specific allelopathy paper. The tribe produces sesquiterpene lactones and phenolics that <em>can</em> be allelopathic in other genera (<i>Eupatorium</i>, <i>Mikania</i>). Joe Pye does not form the monospecific stands that would suggest strong allelopathy. It grows in mixed wet-meadow communities with ironweed, boneset, swamp milkweed. Treat allelopathy as unproven and probably weak.</p>
+      </section>
+
+      <section class="chapter" id="s5">
+        <div class="chapter-num">Section 5</div>
+        <h2>Ecology, range, and what the plant is doing on the land</h2>
+        <p><strong>Native range.</strong> Eastern and central North America. <i>E. maculatum</i> is the only species that crosses the Great Plains (var. <i>bruneri</i> reaches British Columbia, Idaho, Arizona, New Mexico). <i>E. purpureum</i> runs Ontario and New Hampshire south to Florida, Louisiana, Oklahoma. <i>E. fistulosum</i> is eastern, Maine to Florida and Texas. <i>E. dubium</i> is Atlantic coastal plain, Nova Scotia/New Hampshire to South Carolina. <i>E. steelei</i> is southwestern Virginia, eastern Kentucky and Tennessee, western North Carolina.</p>
+        <p><strong>Habitats.</strong> Wet meadows, fens, seeps, stream banks, ditches, floodplain openings, woodland borders, powerline cuts, grassy balds. <i>Purpureum</i> uniquely occupies mesic upland woods.</p>
+        <p><strong>Wetland indicator (2022 National Wetland Plant List)</strong></p>
+        <ul>
+          <li><i>E. purpureum</i>: <strong>FAC</strong> in every region listed — it is a wetland <em>and</em> an upland plant</li>
+          <li><i>E. maculatum</i>: <strong>FACW</strong> in the Atlantic/Gulf coastal plain and eastern mountains; <strong>OBL</strong> in the Midwest, Great Plains, Northcentral/Northeast, Western Mountains</li>
+          <li><i>E. fistulosum</i> / <i>E. dubium</i>: <strong>FACW</strong></li>
+        </ul>
+        <p>If the stand is dense, there is almost certainly a moisture gradient that favors it: a seep, a high water table, a compacted clay that stays wet, or a drainage.</p>
+        <p><strong>Soil.</strong> Clay to sandy loam to gravel, as long as moisture is there. pH from acid through alkaline — NC State lists <i>purpureum</i> as tolerant of all three. <i>Maculatum</i> is often associated with calcareous wetlands (marl fens, wet calcareous meadows). <i>Dubium</i> prefers acidic coastal soils. Organic matter helps because it holds water.</p>
+        <p><strong>Light.</strong> Full sun to part shade. More sun = taller, more flowers, more mildew risk in humid climates. <i>Purpureum</i> is the shade performer.</p>
+        <p><strong>Juglone.</strong> Compatible with black walnut. Useful if there is <i>Juglans</i> on the property.</p>
+        <p><strong>Disturbance.</strong> These are plants of <strong>open or edge</strong> habitat, not closed-canopy forest interiors (except <i>purpureum</i> in gaps). They increase after ditching, beaver activity, logging that opens the canopy, and abandonment of wet pasture. A heavy stand often means the site was opened and then left alone.</p>
+        <p><strong>Outside North America.</strong> <i>E. purpureum</i> has escaped in New Zealand. <i>E. fistulosum</i> is recorded as invasive in Slovenia. Inside the native range they are not invasive; they are opportunistic natives. Deadheading prevents unwanted seedlings in a production bed.</p>
+      </section>
+
+      <section class="chapter" id="s6">
+        <div class="chapter-num">Section 6</div>
+        <h2>Pollinators, herbivores, and the food web</h2>
+        <p>This is why the plant is in demand.</p>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Monarch%26JoePyeWeed_02.jpg/1280px-Monarch%26JoePyeWeed_02.jpg" alt="Monarch butterfly nectaring on Joe Pye Weed">
+          <figcaption>Monarch on Joe Pye Weed. Late-season nectar is one reason the plant is specified for pollinator plantings. Wikimedia Commons.</figcaption>
+        </figure>
+
+        <h3>Adult nectar and pollen</h3>
+        <p>Joe Pye is one of the most consistently cited late-season pollinator magnets in eastern North America. Visitors include:</p>
+        <ul>
+          <li><strong>Bees:</strong> bumble bees, honey bees, leafcutter bees, long-horned bees, digger bees, small native bees, bee flies (Bombyliidae)</li>
+          <li><strong>Butterflies:</strong> tiger swallowtail, black swallowtail, monarch (migratory fueling), painted lady, cloudless sulphur, skippers (Zabulon, little glassywing), many others</li>
+          <li><strong>Other:</strong> wasps, moths, beetles, hoverflies</li>
+        </ul>
+        <p>Xerces Society lists the genus as special-value to native bees. Lady Bird / Xerces: “Special Value to Native Bees.”</p>
+        <p>A commercial blog cites 38% nectar sucrose and “30+ Lepidoptera species.” Those numbers could not be verified in a primary paper. Treat them as marketing until someone measures them. What <em>is</em> solid is the observational consensus: a blooming clump is covered.</p>
+
+        <h3>Larval hosts</h3>
+        <p>Joe Pye is a <strong>host plant</strong>, not just a nectar bar.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Insect</th><th>What it eats</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><i>Papaipema eupatorii</i> (Joe-Pye-weed borer)</td><td><strong>Bores into stems and roots/crown</strong></td></tr>
+              <tr><td><i>Carmenta bassiformis</i> (Eupatorium borer moth, a clearwing)</td><td>Stems/roots</td></tr>
+              <tr><td><i>Schinia trifascia</i> (three-lined flower moth)</td><td>Flowers/seeds</td></tr>
+              <tr><td><i>Phragmatobia fuliginosa</i> (ruby tiger moth)</td><td>Foliage</td></tr>
+              <tr><td><i>Haploa clymene</i> (Clymene moth)</td><td>Foliage</td></tr>
+              <tr><td><i>Condica vecors</i> (dusky groundling)</td><td>Foliage</td></tr>
+              <tr><td><i>Perigea xanthioides</i> (red groundling)</td><td>Foliage</td></tr>
+              <tr><td><i>Calycomyza flavinotum</i></td><td>Leaf-miner, blotch mines</td></tr>
+              <tr><td>Pearl crescent (<i>Phyciodes tharos</i>)</td><td>Sometimes listed; a generalist Asteraceae feeder</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout warn">
+          <strong>The farm pest in this list</strong>
+          The Joe-Pye-weed borer (<i>Papaipema eupatorii</i>) is the one that matters for production. <i>Papaipema</i> larvae are classic crown/root borers. They can weaken or kill individual stems and, in high density, damage the crown. In a wild stand this is ecology. In a production block it is a crop pest. No economic-threshold data was found. If you scale up, scout crowns in late summer/fall for frass and wilted stems.
+        </div>
+        <p>Other feeders: aphid <i>Aphis vernoniae</i>, treehopper <i>Entylia bactriana</i>, leaf beetles <i>Exema dispar</i> and <i>Ophraella notata</i>, gall midge <i>Dasyneura purpurea</i>.</p>
+
+        <h3>Vertebrates</h3>
+        <p>Swamp sparrows and other small birds eat the seed. Deer and rabbits generally avoid mature foliage (bitter); they will browse tender spring shoots. Livestock eat it only when little else is available. It is <strong>not</strong> a forage crop.</p>
+        <p>Hollow stems left standing are solitary-bee nesting habitat. If you farm for the pollinator-plant market, that is a selling point. If you farm for clean nursery stock, you cut them down.</p>
+      </section>
+
+      <section class="chapter" id="s7">
+        <div class="chapter-num">Section 7</div>
+        <h2>Chemistry, medicine, and toxicity</h2>
+
+        <h3>Historical medicine</h3>
+        <p>Roots of <i>E. purpureum</i> (and, in practice, <i>maculatum</i>) were “gravel root”: a diuretic and urinary-tract herb for kidney stones, “dropsy,” gout, and related complaints. Native American ethnobotany records 50+ uses across tribes (colds, fevers, GI, burns as a leaf poultice, gonorrhea, laxative). Eclectic physicians (King’s <i>American Dispensatory</i>) emphasized <i>E. purpureum</i>. Herbalists today still use the root as tea or tincture, often in formulas rather than alone.</p>
+        <p>Boneset (<i>E. perfoliatum</i>) is a different medicine (aerial parts, influenza/fevers). Do not conflate them.</p>
+
+        <h3>Isolated compounds (gravel root, <i>E. purpureum</i>)</h3>
+        <p>A peer-reviewed phytochemical study of gravel root isolated <strong>benzofurans</strong>:</p>
+        <ul>
+          <li><strong>euparin</strong></li>
+          <li><strong>euparone</strong></li>
+          <li><strong>6-hydroxy-3β-methoxytrematone</strong></li>
+        </ul>
+        <p>and demonstrated <strong>anti-inflammatory activity</strong>, consistent with the antirheumatic folk use.</p>
+        <p>The broader tribe is rich in <strong>sesquiterpene lactones</strong>, <strong>flavonoids</strong>, and (in some genera) <strong>pyrrolizidine alkaloids (PAs)</strong>.</p>
+
+        <h3>The PA / liver-toxicity issue</h3>
+        <p>Consumer-health sources (WebMD, RxList) list gravel root as <strong>LIKELY UNSAFE</strong> because of hepatotoxic pyrrolizidine alkaloids. This is the most important chemical caveat, and it is messier than those pages imply.</p>
+        <ul>
+          <li>PAs are well documented in <i>Eupatorium cannabinum</i> and <i>Eupatorium perfoliatum</i>.</li>
+          <li>They are <strong>assumed by association</strong> for <i>Eutrochium</i> in many secondary sources.</li>
+          <li>No modern quantitative PA profile was found that cleanly separates <i>Eutrochium</i> roots from <i>Eupatorium</i> aerial parts.</li>
+          <li>Until someone publishes that profile, <strong>do not sell this as an internal herbal product</strong> without independent lab testing for PAs. The ornamental/pollinator market does not have this problem. The herbal-crop market does.</li>
+        </ul>
+
+        <h3>What it is <em>not</em></h3>
+        <p><strong>White snakeroot (<i>Ageratina altissima</i>)</strong> contains <strong>tremetol</strong> and caused milk sickness. It used to share the genus <i>Eupatorium</i>. Some veterinary lists still mislabel it “Joe Pye Weed.” That is a nomenclatural error. True <i>Eutrochium</i> is not the milk-sickness plant. Foliage is bitter, not a preferred browse, and no documented livestock-poisoning syndrome from Joe Pye comparable to snakeroot was found.</p>
+        <p>North Creek Nurseries flags ‘Little Joe’ as “Caution: Toxic.” That is almost certainly the PA-association warning, not an acute-toxicity rating. No primary literature showing <i>Eutrochium</i> is poisonous to dogs was found. The scare comes from the snakeroot mix-up.</p>
+      </section>
+
+      <section class="chapter" id="s8">
+        <div class="chapter-num">Section 8</div>
+        <h2>Cultivation, propagation, and how you would actually farm it</h2>
+
+        <h3>Site</h3>
+        <p>Match species to moisture.</p>
+        <ul>
+          <li><i>E. purpureum</i>: average to moist, part shade to sun. The only species that forgives a normal field.</li>
+          <li><i>E. maculatum</i> / <i>fistulosum</i>: moist to wet, full sun. Rain-garden, swale, pond-margin, or irrigated production. Leaves scorch if the soil dries.</li>
+          <li><i>E. dubium</i> and its cultivars: moist, average garden soil; ‘Little Joe’ was selected for <strong>better drought tolerance</strong> than the species (USPP 16,122).</li>
+        </ul>
+        <p>Soil: they tolerate clay. They do not need high fertility. Chicago Botanic Garden grew 26 taxa for 4–13 years with <strong>no fertilizer</strong>, overhead irrigation only as needed, shredded-leaf/wood-chip mulch, pH 7.4 clay-loam. Nearly half rated good or excellent. Over-amending and drought are what make them decline.</p>
+        <p>Spacing: 24–36 in for compact cultivars; 36–48 in for species plants. They get big.</p>
+
+        <h3>Propagation — three commercial paths</h3>
+        <div class="grid-2">
+          <div class="card">
+            <h3>1. Seed — cheapest, slowest, variable</h3>
+            <ul>
+              <li>Collect 4–5 weeks after bloom, plump seed only</li>
+              <li>Refrigerate sealed</li>
+              <li>60–90 days cold-moist strat, or fall-sow / winter-sow</li>
+              <li>Surface sow, light, keep moist</li>
+              <li>Low germination — oversow</li>
+              <li>Year 1: plugs. Year 2: gallons, first bloom</li>
+            </ul>
+            <p style="margin:0">This is how you farm a <strong>local ecotype</strong> from the property. Seedlings of named cultivars <strong>do not come true</strong>.</p>
+          </div>
+          <div class="card">
+            <h3>2. Division — fastest from a wild stand</h3>
+            <ul>
+              <li>Early spring at shoot emergence, or fall as plants go dormant</li>
+              <li>Dig 2 in beyond the crown, lift, saw into 2–4 pieces</li>
+              <li>Replant immediately at the same depth</li>
+              <li>Divide every 3–5 years anyway to keep the crown healthy</li>
+            </ul>
+            <p style="margin:0">A mature wild clump is a <strong>stock-plant resource</strong>. One afternoon of division can fill a liner house.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-bottom:1rem">
+          <h3>3. Stem cuttings — how the cultivar industry works</h3>
+          <p>Softwood / tip cuttings in late spring. The ‘Little Joe’ patent specifies division <strong>and cuttings</strong>; traits are stable through both. Vegetative only for patented/trademarked cultivars. Tissue culture is used at scale by liner specialists (North Creek and similar).</p>
+          <p style="margin:0"><strong>Patents matter.</strong> ‘Little Joe’ (USPP 16,122, filed 2003, inventor Angela Jo Palmer, Conard-Pyle / later Ball Horticultural) is <strong>expired</strong> (adjusted expiration 2024-03-22). ‘Baby Joe’ is PP20,320 — check current status before propagating it for sale. Selling unlicensed patented plants is a real legal problem. Straight species from the land has no IP restriction.</p>
+        </div>
+
+        <h3>Production problems</h3>
+        <p><strong>Powdery mildew</strong> is the disease. Chicago Botanic Garden trial (2001–2013, Zone 5b, no fungicides):</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Rating</th><th>Taxa</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>★★★★★ excellent</td>
+                <td><i>E. dubium</i> ‘Little Joe’; <i>E. fistulosum</i> ‘Carin’; <i>E. fistulosum</i> f. <i>albidum</i> ‘Bartered Bride’</td>
+                <td>Best flower, habit, mildew resistance</td>
+              </tr>
+              <tr>
+                <td>★★★★ good</td>
+                <td><i>E. dubium</i> ‘Baby Joe’; <i>E. maculatum</i> ‘Phantom’, ‘Purple Bush’; <i>E. purpureum</i> (species)</td>
+                <td>‘Baby Joe’ had minor mildew some years</td>
+              </tr>
+              <tr>
+                <td>★★★ fair / poor mildew</td>
+                <td>‘Gateway’, ‘Atropurpureum’, ‘Little Red’, ‘Glutball’, ‘Riesenschirm’, <i>maculatum</i> species</td>
+                <td>‘Gateway’ is the most common garden-center plant and one of the worst for mildew</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Infection peaked at 65% of taxa in a humid year. Some years, zero mildew. Airflow, full sun, and not overcrowding matter more than chemistry. Do not overhead-water in the evening.</p>
+        <p>Other issues: rust (occasional), Japanese beetles (cosmetic), unidentified caterpillars (cosmetic), <strong>crown injury</strong> in <i>maculatum</i> in some Chicago winters, flopping of tall plants after rain or in shade. The Chelsea chop (cut by one-third in mid-June) produces shorter, sturdier, slightly later bloom — standard production trick for the tall species. Scorch = dry soil. Fix water, not the plant. Deer: mature plants are resistant; protect seedlings.</p>
+
+        <h3>Time to a saleable plant</h3>
+        <ul>
+          <li>Seed → 32-cell or 50-cell plug: one season</li>
+          <li>Plug → 1-gallon: following spring/summer, often blooming in the pot if started early</li>
+          <li>Division of a 3-year crown → saleable gallon the same season</li>
+          <li>3-gallon specimens for the landscape trade: year 2–3</li>
+        </ul>
+      </section>
+
+      <section class="chapter" id="s9">
+        <div class="chapter-num">Section 9</div>
+        <h2>The market you would actually sell into</h2>
+        <p>There are <strong>three different businesses</strong> hiding under “Joe Pye is in demand.”</p>
+
+        <h3>A. Native-plant / restoration / rain-garden market</h3>
+        <p>Straight-species, preferably <strong>local ecotype</strong>, sold as plugs, quarts, or gallons. Buyers: conservation districts, landscapers doing municipal rain gardens, native-plant nurseries, habitat restorations, savvy homeowners. This is the market a wild stand is already built for. Genetic diversity is a feature. You can sell seed, plugs, and divisions of <em>your</em> population.</p>
+        <p>Demand drivers: pollinator plantings, MS4/stormwater compliance, native-plant ordinances, federal and state habitat cost-share.</p>
+
+        <h3>B. Ornamental garden-center market</h3>
+        <p>Compact, colored-stem, mildew-resistant <strong>cultivars</strong>. This is where the money per plant is, and where the IP and branding live.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cultivar</th>
+                <th>Species</th>
+                <th>Catalog / CBG trial height</th>
+                <th>Why it sells</th>
+                <th>Watch-outs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>‘Little Joe’</strong></td>
+                <td><i>E. dubium</i></td>
+                <td>3–4 ft / <strong>60 in in trial</strong></td>
+                <td>CBG 5-star; compact; mildew-resistant; industry standard</td>
+                <td>Catalog height is a lie; it will be 5 ft in rich moist soil</td>
+              </tr>
+              <tr>
+                <td><strong>‘Baby Joe’</strong> PP20,320</td>
+                <td><i>E. dubium</i></td>
+                <td>2–4 ft / 60 in in trial</td>
+                <td>Smaller gardens, containers</td>
+                <td>Also taller than advertised; good (not excellent) mildew rating</td>
+              </tr>
+              <tr>
+                <td><strong>‘Gateway’</strong></td>
+                <td><i>E. maculatum</i></td>
+                <td>4–5 ft / <strong>78 in</strong></td>
+                <td>Deep burgundy stems; everywhere in big-box</td>
+                <td><strong>Poor mildew</strong>; CBG knocked it down for that</td>
+              </tr>
+              <tr>
+                <td><strong>‘Phantom’</strong></td>
+                <td><i>E. maculatum</i></td>
+                <td>3–4 ft / 54 in</td>
+                <td>Compact, bushy, good mildew</td>
+                <td>One of the better <i>maculatum</i> types</td>
+              </tr>
+              <tr>
+                <td><strong>‘Purple Bush’</strong></td>
+                <td><i>E. maculatum</i></td>
+                <td>4–5 ft / 64 in</td>
+                <td>Dense habit; RHS AGM as Atropurpureum Group</td>
+                <td>Slightly taller than billed</td>
+              </tr>
+              <tr>
+                <td><strong>‘Carin’</strong></td>
+                <td><i>E. fistulosum</i></td>
+                <td>5–7 ft / <strong>85 in</strong></td>
+                <td>CBG 5-star; pale pink; sturdy</td>
+                <td>Large plant</td>
+              </tr>
+              <tr>
+                <td><strong>‘Bartered Bride’</strong></td>
+                <td><i>E. fistulosum</i> f. <i>albidum</i></td>
+                <td>6–8 ft / <strong>90 in</strong></td>
+                <td>White; CBG 5-star</td>
+                <td>White + brown spent flowers look dirty mid-bloom</td>
+              </tr>
+              <tr>
+                <td><strong>‘Riesenschirm’</strong></td>
+                <td><i>E. maculatum</i></td>
+                <td>5–6 ft / 75 in</td>
+                <td>RHS AGM; huge heads</td>
+                <td>Fair mildew; 90 in wide in trial</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>RHS Award of Garden Merit: <i>E. maculatum</i> Atropurpureum Group ‘Orchard Dene’, ‘Purple Bush’, ‘Riesenschirm’.</p>
+        <p><strong>Wholesale price signal (one 2025–26 liner list):</strong> ‘Baby Joe’ rooted plugs at <strong>$1.18/plug</strong> in trays of 70 ($82.67/tray); splits at $1.37. Retail gallons commonly $12–20. That is typical hardy-perennial math, not a luxury crop. Margin comes from volume, from 3-gallon specimens, and from being the local native-plant source when everyone else is selling ‘Gateway’ in bloom.</p>
+
+        <h3>C. Cut-flower / dried-arrangement sideline</h3>
+        <p>The plumes last in a vase; dried seed heads are used in arrangements. This is a sideline, not a farm. Stems are tall and hollow — they drink hard and can flop in a bucket. Harvest when one-third of the head is open.</p>
+
+        <h3>D. Herbal / “gravel root” market</h3>
+        <p>Do not build a farm on this. PA uncertainty, species confusion in the trade, and a small buyer pool. Digging roots from a huge wild stand for personal use is different from selling a botanical.</p>
+
+        <h3>What “in demand” actually means</h3>
+        <p>Joe Pye is in demand the way <i>Echinacea</i>, <i>Asclepias</i>, and <i>Rudbeckia</i> are in demand: native, pollinator, photogenic, easy to grow in the right spot. It is <strong>not</strong> a shortage crop with runaway prices. Compact cultivars stay in liner catalogs year after year (North Creek still lists ‘Little Joe’ as a standard). Straight species sell whenever a restoration spec calls for them. The advantage is not novelty. It is <strong>having a huge, locally adapted, already-established population</strong> that other growers would have to buy seed and wait two years to match.</p>
+      </section>
+
+      <section class="chapter" id="s10">
+        <div class="chapter-num">Section 10</div>
+        <h2>Farming implications, honestly</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>What you have going for you</h3>
+            <ul>
+              <li>A crop that already grows on the land without inputs. That is the hardest part of perennial production already done.</li>
+              <li>Easy vegetative multiplication. The root system is built for division.</li>
+              <li>A product the market already understands. You do not have to invent demand.</li>
+              <li>Multiple SKUs from one biology: local-ecotype plugs, landscape gallons, maybe a selected compact seedling line of your own (that is how ‘Little Joe’ was found — a single compact plant in a seedling row at Conard-Pyle in Jennersville, Pennsylvania).</li>
+              <li>Low fertility need, deer-resistant once established, clay-tolerant, rain-garden spec plant.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What will fight you</h3>
+            <ul>
+              <li><strong>Water.</strong> If production beds are drier than the wild stand, plants will scorch and look unsaleable in July. Farm it <em>in</em> the wet, or irrigate.</li>
+              <li><strong>Size.</strong> Species plants are 6–10 ft. Many buyers want 3–4 ft. Either Chelsea-chop, select compact seedlings, or grow <i>dubium</i> cultivars.</li>
+              <li><strong>Mildew</strong> in humid summers. Site for airflow. Do not grow ‘Gateway’ as the flagship in a humid climate.</li>
+              <li><strong>Misidentification.</strong> Nurseries constantly sell <i>maculatum</i> as <i>purpureum</i> and vice versa. Label honestly.</li>
+              <li><strong>Seedlings of cultivars are not cultivars.</strong> If you go the named-variety route, propagate vegetatively and watch patents.</li>
+              <li><strong>Borer moths</strong> in a dense production block. Unknown risk. Scout.</li>
+              <li><strong>Time.</strong> This is a 2-year plant from seed, not a 10-week annual.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>A sane first farm plan</h3>
+        <ol class="id-steps">
+          <li><strong>Identify the species</strong> on the property this blooming season. Stem pith, node color, floret count, inflorescence shape, habitat.</li>
+          <li><strong>Do not strip the wild stand.</strong> Treat it as a stock-plant orchard. Take divisions from the edges. Leave the core for seed and for the insects that are the reason the plant is valuable.</li>
+          <li><strong>Start two product lines:</strong> local-ecotype plugs and gallons, labeled with the real species and county of origin; and a compact selection — mark the shortest, sturdiest, most floriferous individuals for three years, then divide those. That is how every good Joe Pye cultivar was made.</li>
+          <li><strong>Do not start with patented cultivars</strong> unless you want to be a licensed liner grower. The wild genetics are the scarce thing.</li>
+          <li><strong>Match production soil to the species.</strong> If you have <i>fistulosum</i> in a seep, grow it in a seep or a lined bed you can keep wet. Do not fight the plant.</li>
+          <li><strong>Skip the herbal line</strong> until PA testing exists for the species and plant part you would sell.</li>
+        </ol>
+      </section>
+
+      <section class="chapter" id="s11">
+        <div class="chapter-num">Section 11</div>
+        <h2>Knowledge gaps</h2>
+        <p>These are real holes, not just “more research would be nice”:</p>
+        <ul>
+          <li>No quantitative root-depth or root-biomass study</li>
+          <li>No <i>Eutrochium</i>-specific mycorrhizal colonization data</li>
+          <li>No allelopathy bioassay</li>
+          <li>No published PA quantification that separates <i>Eutrochium</i> from <i>Eupatorium</i></li>
+          <li>No nectar-volume or sugar-concentration paper that could be verified</li>
+          <li>No agronomic yield trial (plants per acre, saleable gallons per liner, economic budget)</li>
+          <li>No <i>Papaipema</i> economic threshold for nursery production</li>
+          <li>Ploidy variation across the range is thinly documented compared to, say, <i>Solidago</i> or <i>Symphyotrichum</i></li>
+          <li>Hybrid zones are acknowledged by every flora and almost unstudied</li>
+        </ul>
+        <div class="callout gap">
+          <strong>How to read the gaps</strong>
+          Where those gaps exist, related-plant inferences (<i>E. perfoliatum</i>, <i>E. cannabinum</i>, general wetland Asteraceae) are the best available model. They are models, not measurements.
+        </div>
+      </section>
+
+      <section class="chapter" id="s12">
+        <div class="chapter-num">Section 12</div>
+        <h2>Principal sources</h2>
+        <p>This brief synthesizes floras, horticultural trials, patents, and grower literature. It is not a peer-reviewed monograph. Primary anchors:</p>
+        <ul>
+          <li>Lamont, E. E. 1995. <i>Taxonomy of Eupatorium Section Verticillata (Asteraceae)</i>. New York Botanical Garden. And Lamont 2004 (<i>Sida</i> 21: 901–902); 2006 treatments in <i>Flora of North America</i> vol. 21.</li>
+          <li>Hawke, R. 2014. “A Comparative Study of Joe-Pye Weeds (<i>Eutrochium</i> spp.) and Their Relatives.” <i>Plant Evaluation Notes</i> 37. Chicago Botanic Garden.</li>
+          <li>NC State Extension Gardener Plant Toolbox treatments of <i>E. purpureum</i>, <i>E. maculatum</i>, <i>E. fistulosum</i>.</li>
+          <li>Lady Bird Johnson Wildflower Center plant database (wetland indicator, seed biology).</li>
+          <li>Illinois Wildflowers: <i>E. fistulosum</i>, <i>Eupatorium perfoliatum</i>.</li>
+          <li>Schilling, Panero &amp; Cox 1999; Schmidt &amp; Schilling 2000 (molecular justification for splitting <i>Eutrochium</i> from <i>Eupatorium</i>).</li>
+          <li>Pearce &amp; Pringle 2017. “Joe Pye, Joe Pye’s Law, and Joe-Pye-Weed.” <i>The Great Lakes Botanist</i> 56: 177–200.</li>
+          <li>USPP 16,122 — <i>Eupatorium</i> plant named ‘Little Joe’ (Palmer / Conard-Pyle, 2005; expired 2024).</li>
+          <li>North Creek Nurseries crop sheet for <i>Eupatorium dubium</i> ‘Little Joe’.</li>
+          <li>7Song, Northeast School of Botanical Medicine — field notes on gravel-root species and photographed <i>E. purpureum</i> roots.</li>
+          <li>Chromosome counts via ChromoDB / Lamont 1995; base number <i>x</i> = 10 from FNA.</li>
+          <li>Xerces Society; USDA PLANTS / 2022 National Wetland Plant List.</li>
+        </ul>
+        <p>Figures are from Wikimedia Commons and remain under their original licenses. Do not treat commercial blog claims (nectar sucrose %, “30+ Lepidoptera”) as measured data unless a primary paper is cited.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site">
+    <p>Compiled 13 August 2026 as a private research brief for farming evaluation. Not agronomic advice, not medical advice, not a substitute for a local botanist’s ID.</p>
+    <p>Local copy: <span class="mono">~/Documents/joe-pye-weed-report/index.html</span></p>
+  </footer>
+</body>
+</html>
